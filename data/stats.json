@@ -1,0 +1,1167 @@
+{
+ "models": {
+  "opus": {
+   "name": "Opus 5.5",
+   "maker": "Anthropic"
+  },
+  "sonnet": {
+   "name": "Sonnet 5.5",
+   "maker": "Anthropic"
+  },
+  "astra": {
+   "name": "GPT-6 Astra",
+   "maker": "OpenAI"
+  },
+  "sol61": {
+   "name": "GPT-6.1 Sol",
+   "maker": "OpenAI"
+  },
+  "gpt55": {
+   "name": "GPT-5.5",
+   "maker": "OpenAI"
+  },
+  "sol56": {
+   "name": "GPT-5.6 Sol",
+   "maker": "OpenAI"
+  },
+  "glove": {
+   "name": "GloVe",
+   "maker": "Baseline"
+  }
+ },
+ "versus": {
+  "games": 300,
+  "clues": 2116,
+  "first_mover": {
+   "red_wins": 160,
+   "decided": 300,
+   "ci": [
+    0.47681387445407486,
+    0.5890098968794095
+   ]
+  },
+  "endings": {
+   "assassin": 50,
+   "cleared": 240,
+   "own_goal": 10
+  },
+  "teams": [
+   {
+    "name": "Opus 5.5",
+    "wins": 72,
+    "games": 150,
+    "rate": 0.48,
+    "ci": [
+     0.4015497821637989,
+     0.5594490634020298
+    ],
+    "red": "38/75",
+    "blue": "34/75",
+    "assassin_losses": 10,
+    "key": "opus"
+   },
+   {
+    "name": "Sonnet 5.5",
+    "wins": 30,
+    "games": 150,
+    "rate": 0.2,
+    "ci": [
+     0.14383992805606738,
+     0.27114275543136385
+    ],
+    "red": "17/75",
+    "blue": "13/75",
+    "assassin_losses": 26,
+    "key": "sonnet"
+   },
+   {
+    "name": "GPT-6 Astra",
+    "wins": 100,
+    "games": 150,
+    "rate": 0.6666666666666666,
+    "ci": [
+     0.5878960768592673,
+     0.7371135434254931
+    ],
+    "red": "54/75",
+    "blue": "46/75",
+    "assassin_losses": 5,
+    "key": "astra"
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "wins": 98,
+    "games": 150,
+    "rate": 0.6533333333333333,
+    "ci": [
+     0.5742027248462458,
+     0.7248061258157337
+    ],
+    "red": "51/75",
+    "blue": "47/75",
+    "assassin_losses": 9,
+    "key": "sol61"
+   }
+  ],
+  "h2h": {
+   "opus": {
+    "sonnet": "38-12",
+    "astra": "18-32",
+    "sol61": "16-34"
+   },
+   "sonnet": {
+    "opus": "12-38",
+    "astra": "8-42",
+    "sol61": "10-40"
+   },
+   "astra": {
+    "opus": "32-18",
+    "sonnet": "42-8",
+    "sol61": "26-24"
+   },
+   "sol61": {
+    "opus": "34-16",
+    "sonnet": "40-10",
+    "astra": "24-26"
+   }
+  },
+  "pressure": [
+   {
+    "name": "Opus 5.5",
+    "clues": 538,
+    "moonshot_clues": 10,
+    "moonshot_mean_number": 2.3,
+    "matched_close_mean_number": 2.029726443768997,
+    "shift": 0.270273556231003,
+    "matched_n": 10,
+    "moonshot_share_3plus": 0.3,
+    "close_share_3plus": 0.22994652406417113,
+    "moonshot_precision": 1.0666666666666667,
+    "close_precision": 0.9271390374331551,
+    "moonshot_bonus_rate": 0.6,
+    "games_facing_moonshot": 9,
+    "swung_wins": "1/3",
+    "held_wins": "0/6",
+    "key": "opus"
+   },
+   {
+    "name": "Sonnet 5.5",
+    "clues": 513,
+    "moonshot_clues": 45,
+    "moonshot_mean_number": 3.3777777777777778,
+    "matched_close_mean_number": 2.2131713108457296,
+    "shift": 1.1646064669320482,
+    "matched_n": 45,
+    "moonshot_share_3plus": 0.5777777777777777,
+    "close_share_3plus": 0.3355048859934853,
+    "moonshot_precision": 0.6518518518518519,
+    "close_precision": 0.7904451682953312,
+    "moonshot_bonus_rate": 0.2222222222222222,
+    "games_facing_moonshot": 41,
+    "swung_wins": "0/26",
+    "held_wins": "1/15",
+    "key": "sonnet"
+   },
+   {
+    "name": "GPT-6 Astra",
+    "clues": 528,
+    "moonshot_clues": 5,
+    "moonshot_mean_number": 3,
+    "matched_close_mean_number": 2.2327365728900257,
+    "shift": 0.7672634271099744,
+    "matched_n": 5,
+    "moonshot_share_3plus": 1.0,
+    "close_share_3plus": 0.24181360201511334,
+    "moonshot_precision": 0.9333333333333333,
+    "close_precision": 0.957808564231738,
+    "moonshot_bonus_rate": 0.0,
+    "games_facing_moonshot": 5,
+    "swung_wins": "2/5",
+    "held_wins": "0/0",
+    "key": "astra"
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "clues": 537,
+    "moonshot_clues": 6,
+    "moonshot_mean_number": 3.1666666666666665,
+    "matched_close_mean_number": 2.178355660625164,
+    "shift": 0.9883110060415025,
+    "matched_n": 6,
+    "moonshot_share_3plus": 0.8333333333333334,
+    "close_share_3plus": 0.3038277511961722,
+    "moonshot_precision": 0.7361111111111112,
+    "close_precision": 0.9300239234449761,
+    "moonshot_bonus_rate": 0.0,
+    "games_facing_moonshot": 6,
+    "swung_wins": "1/5",
+    "held_wins": "0/1",
+    "key": "sol61"
+   },
+   {
+    "name": "All teams",
+    "clues": 2116,
+    "moonshot_clues": 66,
+    "moonshot_mean_number": 3.1666666666666665,
+    "matched_close_mean_number": 2.1551296500578387,
+    "shift": 1.0115370166088282,
+    "matched_n": 66,
+    "moonshot_share_3plus": 0.5909090909090909,
+    "close_share_3plus": 0.27540106951871657,
+    "moonshot_precision": 0.7436868686868687,
+    "close_precision": 0.9080325311942959,
+    "moonshot_bonus_rate": 0.24242424242424243,
+    "games_facing_moonshot": 61,
+    "swung_wins": "4/39",
+    "held_wins": "1/22",
+    "key": "all"
+   }
+  ],
+  "grid": {
+   "1,1": {
+    "mean": 1,
+    "n": 41
+   },
+   "1,2": {
+    "mean": 1,
+    "n": 27
+   },
+   "1,3": {
+    "mean": 1,
+    "n": 13
+   },
+   "1,4": {
+    "mean": 1,
+    "n": 8
+   },
+   "2,1": {
+    "mean": 2,
+    "n": 70
+   },
+   "2,2": {
+    "mean": 1.9384615384615385,
+    "n": 65
+   },
+   "2,3": {
+    "mean": 1.7241379310344827,
+    "n": 29
+   },
+   "2,4": {
+    "mean": 1.75,
+    "n": 12
+   },
+   "2,5": {
+    "mean": 1,
+    "n": 3
+   },
+   "2,7": {
+    "mean": 1,
+    "n": 1
+   },
+   "3,1": {
+    "mean": 2.7169811320754715,
+    "n": 53
+   },
+   "3,2": {
+    "mean": 2.2,
+    "n": 100
+   },
+   "3,3": {
+    "mean": 1.9833333333333334,
+    "n": 60
+   },
+   "3,4": {
+    "mean": 1.7619047619047619,
+    "n": 21
+   },
+   "3,5": {
+    "mean": 1.875,
+    "n": 8
+   },
+   "3,6": {
+    "mean": 2,
+    "n": 3
+   },
+   "4,1": {
+    "mean": 3.6666666666666665,
+    "n": 15
+   },
+   "4,2": {
+    "mean": 2.462962962962963,
+    "n": 54
+   },
+   "4,3": {
+    "mean": 2.0693069306930694,
+    "n": 101
+   },
+   "4,4": {
+    "mean": 1.9795918367346939,
+    "n": 49
+   },
+   "4,5": {
+    "mean": 1.9259259259259258,
+    "n": 27
+   },
+   "4,6": {
+    "mean": 1.8,
+    "n": 5
+   },
+   "4,7": {
+    "mean": 1.5,
+    "n": 2
+   },
+   "5,1": {
+    "mean": 4.545454545454546,
+    "n": 11
+   },
+   "5,2": {
+    "mean": 2.4642857142857144,
+    "n": 28
+   },
+   "5,3": {
+    "mean": 2.283582089552239,
+    "n": 67
+   },
+   "5,4": {
+    "mean": 2.189655172413793,
+    "n": 116
+   },
+   "5,5": {
+    "mean": 2.1372549019607843,
+    "n": 51
+   },
+   "5,6": {
+    "mean": 2.235294117647059,
+    "n": 17
+   },
+   "5,7": {
+    "mean": 2.3,
+    "n": 10
+   },
+   "6,1": {
+    "mean": 4.5,
+    "n": 2
+   },
+   "6,2": {
+    "mean": 2.857142857142857,
+    "n": 7
+   },
+   "6,3": {
+    "mean": 2.5555555555555554,
+    "n": 18
+   },
+   "6,4": {
+    "mean": 2.4,
+    "n": 50
+   },
+   "6,5": {
+    "mean": 2.269230769230769,
+    "n": 130
+   },
+   "6,6": {
+    "mean": 2.2181818181818183,
+    "n": 55
+   },
+   "6,7": {
+    "mean": 2.125,
+    "n": 8
+   },
+   "6,8": {
+    "mean": 2,
+    "n": 1
+   },
+   "7,1": {
+    "mean": 2,
+    "n": 1
+   },
+   "7,2": {
+    "mean": 2,
+    "n": 2
+   },
+   "7,3": {
+    "mean": 2.4285714285714284,
+    "n": 7
+   },
+   "7,4": {
+    "mean": 2.0526315789473686,
+    "n": 19
+   },
+   "7,5": {
+    "mean": 2.3666666666666667,
+    "n": 60
+   },
+   "7,6": {
+    "mean": 2.1904761904761907,
+    "n": 63
+   },
+   "7,7": {
+    "mean": 2.357142857142857,
+    "n": 14
+   },
+   "7,8": {
+    "mean": 2.25,
+    "n": 4
+   },
+   "7,9": {
+    "mean": 2.5,
+    "n": 2
+   },
+   "8,4": {
+    "mean": 3,
+    "n": 6
+   },
+   "8,5": {
+    "mean": 2.3333333333333335,
+    "n": 12
+   },
+   "8,6": {
+    "mean": 2.688888888888889,
+    "n": 135
+   },
+   "8,7": {
+    "mean": 2.5703703703703704,
+    "n": 135
+   },
+   "8,8": {
+    "mean": 2.9,
+    "n": 10
+   },
+   "8,9": {
+    "mean": 2,
+    "n": 3
+   },
+   "9,5": {
+    "mean": 2,
+    "n": 1
+   },
+   "9,6": {
+    "mean": 2.25,
+    "n": 4
+   },
+   "9,8": {
+    "mean": 2.64,
+    "n": 300
+   }
+  },
+  "bonus": {
+   "opus": {
+    "taken": 51,
+    "clues": 538,
+    "civilian": 28,
+    "assassin": 4,
+    "opponent": 4,
+    "own": 15
+   },
+   "sonnet": {
+    "taken": 51,
+    "clues": 513,
+    "assassin": 10,
+    "own": 11,
+    "civilian": 16,
+    "opponent": 14
+   },
+   "astra": {
+    "taken": 8,
+    "clues": 528,
+    "civilian": 2,
+    "assassin": 1,
+    "opponent": 1,
+    "own": 4
+   },
+   "sol61": {
+    "taken": 10,
+    "clues": 537,
+    "civilian": 3,
+    "own": 4,
+    "assassin": 1,
+    "opponent": 2
+   }
+  },
+  "unanimous": [
+   {
+    "seed": 17,
+    "clue": "SPACE 3",
+    "n": 12,
+    "of": 12
+   },
+   {
+    "seed": 24,
+    "clue": "WEB 2",
+    "n": 12,
+    "of": 12
+   },
+   {
+    "seed": 1,
+    "clue": "FUEL 3",
+    "n": 11,
+    "of": 12
+   },
+   {
+    "seed": 13,
+    "clue": "TRIANGLE 2",
+    "n": 11,
+    "of": 12
+   }
+  ],
+  "repeat": {
+   "opus": {
+    "same": 10,
+    "boards": 25
+   },
+   "sonnet": {
+    "same": 16,
+    "boards": 25
+   },
+   "astra": {
+    "same": 8,
+    "boards": 25
+   },
+   "sol61": {
+    "same": 9,
+    "boards": 25
+   }
+  },
+  "biggest": [
+   {
+    "player": "sonnet",
+    "clue": "PAPER",
+    "number": 6,
+    "got": 4,
+    "own_left": 6,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": true,
+    "won": false,
+    "seed": 12
+   },
+   {
+    "player": "sonnet",
+    "clue": "MOVIE",
+    "number": 6,
+    "got": 2,
+    "own_left": 6,
+    "opp_left": 2,
+    "assassin": false,
+    "gave_last": false,
+    "won": false,
+    "seed": 24
+   },
+   {
+    "player": "sonnet",
+    "clue": "SQUEEZE",
+    "number": 5,
+    "got": 4,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": true,
+    "gave_last": false,
+    "won": false,
+    "seed": 8
+   },
+   {
+    "player": "sonnet",
+    "clue": "MESSAGE",
+    "number": 5,
+    "got": 4,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": false,
+    "won": false,
+    "seed": 12
+   },
+   {
+    "player": "sonnet",
+    "clue": "DANCE",
+    "number": 5,
+    "got": 4,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": false,
+    "won": false,
+    "seed": 19
+   },
+   {
+    "player": "sonnet",
+    "clue": "PACK",
+    "number": 5,
+    "got": 3,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": true,
+    "won": false,
+    "seed": 23
+   },
+   {
+    "player": "sonnet",
+    "clue": "MECHANIC",
+    "number": 5,
+    "got": 2,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": true,
+    "gave_last": false,
+    "won": false,
+    "seed": 2
+   },
+   {
+    "player": "sonnet",
+    "clue": "CARGO",
+    "number": 5,
+    "got": 2,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": true,
+    "won": false,
+    "seed": 3
+   },
+   {
+    "player": "sonnet",
+    "clue": "MAGIC",
+    "number": 5,
+    "got": 2,
+    "own_left": 5,
+    "opp_left": 2,
+    "assassin": true,
+    "gave_last": false,
+    "won": false,
+    "seed": 6
+   },
+   {
+    "player": "sonnet",
+    "clue": "EVIL",
+    "number": 5,
+    "got": 2,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": true,
+    "gave_last": false,
+    "won": false,
+    "seed": 20
+   },
+   {
+    "player": "sonnet",
+    "clue": "SUMMER",
+    "number": 5,
+    "got": 1,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": false,
+    "won": false,
+    "seed": 0
+   },
+   {
+    "player": "sonnet",
+    "clue": "ANCIENT",
+    "number": 5,
+    "got": 1,
+    "own_left": 5,
+    "opp_left": 1,
+    "assassin": false,
+    "gave_last": false,
+    "won": false,
+    "seed": 7
+   }
+  ],
+  "sonnet_assassin": 26
+ },
+ "featured": [
+  {
+   "slug": "sol61-vs-sonnet-board-8",
+   "title": "One word from the miracle",
+   "blurb": "Sonnet trails 5 to 1. Sol needs one more word and will almost surely get it next turn. Sonnet's spymaster says SQUEEZE 5. Its guesser finds LEMON, HAND, OIL and ORGAN, all correct. One word from a comeback, it picks WASHER. WASHER is the assassin."
+  },
+  {
+   "slug": "sol61-vs-astra-board-9",
+   "title": "The clean comeback",
+   "blurb": "Sol falls behind 5 to 2 after Astra's STICKY 3 and COMMITTEE 2. Sol answers with SUPERHERO 3: COMIC, AMAZON, FIRE. Astra's guesser then stumbles on a civilian, and Sol closes it out with CARNIVAL 2."
+  },
+  {
+   "slug": "opus-vs-astra-board-7",
+   "title": "Saved by the assassin",
+   "blurb": "Opus trails 5 to 2 and swings with KRISHNA 3: INDIA, FLUTE, TEMPLE. Level at 2 to 2, Astra says WONDERLAND 2. RABBIT is right. DECK is the assassin, and Opus wins without taking another turn."
+  },
+  {
+   "slug": "sonnet-vs-sol61-board-12",
+   "title": "Six words, one too many",
+   "blurb": "Sonnet trails 6 to 1 and gives the biggest clue of the whole tournament: PAPER 6. NOVEL, BOARD, BOTTLE and PARACHUTE are all right. The fifth pick, SHOP, is Sol's last word, and revealing it hands Sol the game."
+  },
+  {
+   "slug": "astra-vs-sol61-board-24",
+   "title": "Dessert first",
+   "blurb": "Astra trails 5 to 2 and clues DESSERT 3. HONEY, ICE and FORK all land. Sol's guesser misses on AMAZON, and Astra finishes with MISSION 2: AGENT and CHURCH."
+  },
+  {
+   "slug": "sonnet-vs-opus-board-2",
+   "title": "The mechanic",
+   "blurb": "Sonnet trails 5 to 1 and tries MECHANIC 5. ENGINE and NUT are right. NAIL is the assassin."
+  }
+ ],
+ "bench": {
+  "models": [
+   "opus",
+   "sonnet",
+   "gpt55",
+   "sol56",
+   "glove"
+  ],
+  "cells": [
+   {
+    "cluer": "glove",
+    "guesser": "glove",
+    "n": 50,
+    "meanScore": 3.0,
+    "ci": [
+     3.0,
+     3.0
+    ],
+    "winRate": 1.0,
+    "meanNumber": 3.0,
+    "precision": 1.0
+   },
+   {
+    "cluer": "sonnet",
+    "guesser": "glove",
+    "n": 50,
+    "meanScore": 18.06,
+    "ci": [
+     16.04,
+     20.18
+    ],
+    "winRate": 0.48,
+    "meanNumber": 2.1233480176211454,
+    "precision": 0.37044787077826724
+   },
+   {
+    "cluer": "glove",
+    "guesser": "sonnet",
+    "n": 50,
+    "meanScore": 20.46,
+    "ci": [
+     18.34,
+     22.48
+    ],
+    "winRate": 0.28,
+    "meanNumber": 3.473684210526316,
+    "precision": 0.2733918128654971
+   },
+   {
+    "cluer": "glove",
+    "guesser": "gpt55",
+    "n": 50,
+    "meanScore": 17.22,
+    "ci": [
+     15.0,
+     19.46
+    ],
+    "winRate": 0.5,
+    "meanNumber": 3.266832917705736,
+    "precision": 0.28200332502078135
+   },
+   {
+    "cluer": "opus",
+    "guesser": "glove",
+    "n": 50,
+    "meanScore": 20.04,
+    "ci": [
+     18.06,
+     21.82
+    ],
+    "winRate": 0.36,
+    "meanNumber": 1.9282608695652175,
+    "precision": 0.3655797101449275
+   },
+   {
+    "cluer": "glove",
+    "guesser": "opus",
+    "n": 50,
+    "meanScore": 16.5,
+    "ci": [
+     14.26,
+     18.9
+    ],
+    "winRate": 0.54,
+    "meanNumber": 3.2709497206703912,
+    "precision": 0.308659217877095
+   },
+   {
+    "cluer": "sonnet",
+    "guesser": "sonnet",
+    "n": 50,
+    "meanScore": 7.78,
+    "ci": [
+     6.48,
+     9.3
+    ],
+    "winRate": 0.92,
+    "meanNumber": 2.0751633986928106,
+    "precision": 0.7110566448801743
+   },
+   {
+    "cluer": "sonnet",
+    "guesser": "opus",
+    "n": 50,
+    "meanScore": 8.56,
+    "ci": [
+     6.68,
+     10.64
+    ],
+    "winRate": 0.84,
+    "meanNumber": 2.152941176470588,
+    "precision": 0.79640522875817
+   },
+   {
+    "cluer": "opus",
+    "guesser": "sonnet",
+    "n": 50,
+    "meanScore": 6.8,
+    "ci": [
+     5.62,
+     8.28
+    ],
+    "winRate": 0.94,
+    "meanNumber": 1.9103942652329748,
+    "precision": 0.8512544802867383
+   },
+   {
+    "cluer": "opus",
+    "guesser": "opus",
+    "n": 50,
+    "meanScore": 5.18,
+    "ci": [
+     5.0,
+     5.34
+    ],
+    "winRate": 1.0,
+    "meanNumber": 1.942084942084942,
+    "precision": 0.9124839124839125
+   },
+   {
+    "cluer": "sonnet",
+    "guesser": "gpt55",
+    "n": 50,
+    "meanScore": 9.22,
+    "ci": [
+     7.38,
+     11.38
+    ],
+    "winRate": 0.84,
+    "meanNumber": 2.0807017543859647,
+    "precision": 0.718421052631579
+   },
+   {
+    "cluer": "gpt55",
+    "guesser": "glove",
+    "n": 50,
+    "meanScore": 18.76,
+    "ci": [
+     16.74,
+     20.72
+    ],
+    "winRate": 0.44,
+    "meanNumber": 1.9582463465553235,
+    "precision": 0.3853514265831594
+   },
+   {
+    "cluer": "opus",
+    "guesser": "gpt55",
+    "n": 50,
+    "meanScore": 6.16,
+    "ci": [
+     5.28,
+     7.36
+    ],
+    "winRate": 0.96,
+    "meanNumber": 1.9696969696969697,
+    "precision": 0.8693181818181818
+   },
+   {
+    "cluer": "gpt55",
+    "guesser": "opus",
+    "n": 50,
+    "meanScore": 6.52,
+    "ci": [
+     5.32,
+     8.06
+    ],
+    "winRate": 0.94,
+    "meanNumber": 1.9343629343629343,
+    "precision": 0.887001287001287
+   },
+   {
+    "cluer": "gpt55",
+    "guesser": "sonnet",
+    "n": 50,
+    "meanScore": 6.92,
+    "ci": [
+     5.78,
+     8.28
+    ],
+    "winRate": 0.94,
+    "meanNumber": 1.9238754325259515,
+    "precision": 0.8267012687427912
+   },
+   {
+    "cluer": "gpt55",
+    "guesser": "gpt55",
+    "n": 50,
+    "meanScore": 7.12,
+    "ci": [
+     5.86,
+     8.7
+    ],
+    "winRate": 0.92,
+    "meanNumber": 1.9296296296296296,
+    "precision": 0.8657407407407407
+   },
+   {
+    "cluer": "sonnet",
+    "guesser": "sol56",
+    "n": 50,
+    "meanScore": 7.36,
+    "ci": [
+     6.18,
+     8.84
+    ],
+    "winRate": 0.94,
+    "meanNumber": 2.0566666666666666,
+    "precision": 0.7388888888888888
+   },
+   {
+    "cluer": "glove",
+    "guesser": "sol56",
+    "n": 50,
+    "meanScore": 17.74,
+    "ci": [
+     15.36,
+     20.0
+    ],
+    "winRate": 0.46,
+    "meanNumber": 3.3858267716535435,
+    "precision": 0.27449693788276464
+   },
+   {
+    "cluer": "sol56",
+    "guesser": "glove",
+    "n": 50,
+    "meanScore": 19.98,
+    "ci": [
+     18.04,
+     21.72
+    ],
+    "winRate": 0.36,
+    "meanNumber": 1.8079847908745248,
+    "precision": 0.36929657794676807
+   },
+   {
+    "cluer": "sol56",
+    "guesser": "sonnet",
+    "n": 50,
+    "meanScore": 8.96,
+    "ci": [
+     7.36,
+     10.76
+    ],
+    "winRate": 0.88,
+    "meanNumber": 1.787037037037037,
+    "precision": 0.7839506172839507
+   },
+   {
+    "cluer": "gpt55",
+    "guesser": "sol56",
+    "n": 50,
+    "meanScore": 7.44,
+    "ci": [
+     5.96,
+     9.18
+    ],
+    "winRate": 0.9,
+    "meanNumber": 1.915057915057915,
+    "precision": 0.8732303732303732
+   },
+   {
+    "cluer": "sol56",
+    "guesser": "opus",
+    "n": 50,
+    "meanScore": 8.3,
+    "ci": [
+     6.84,
+     10.02
+    ],
+    "winRate": 0.9,
+    "meanNumber": 1.8173076923076923,
+    "precision": 0.7964743589743589
+   },
+   {
+    "cluer": "opus",
+    "guesser": "sol56",
+    "n": 50,
+    "meanScore": 5.44,
+    "ci": [
+     5.2,
+     5.7
+    ],
+    "winRate": 1.0,
+    "meanNumber": 1.9301470588235294,
+    "precision": 0.8762254901960784
+   },
+   {
+    "cluer": "sol56",
+    "guesser": "gpt55",
+    "n": 50,
+    "meanScore": 6.62,
+    "ci": [
+     5.98,
+     7.56
+    ],
+    "winRate": 0.98,
+    "meanNumber": 1.7954545454545454,
+    "precision": 0.8216991341991342
+   },
+   {
+    "cluer": "sol56",
+    "guesser": "sol56",
+    "n": 50,
+    "meanScore": 7.48,
+    "ci": [
+     6.4,
+     9.0
+    ],
+    "winRate": 0.94,
+    "meanNumber": 1.8571428571428572,
+    "precision": 0.7819264069264069
+   }
+  ],
+  "games": 1250,
+  "selfplay": {
+   "mean": -0.4683333333333334,
+   "ci": [
+    -1.1266666666666667,
+    0.25666666666666665
+   ],
+   "boards": 50
+  },
+  "effects": {
+   "Opus": {
+    "cluer": -1.34625,
+    "cluer_ci": [
+     -1.76625,
+     -0.89
+    ],
+    "guesser": -0.10125,
+    "guesser_ci": [
+     -0.69125,
+     0.48625
+    ],
+    "own_pair_residual": -0.61375,
+    "own_pair_ci": [
+     -1.3225,
+     0.0575
+    ]
+   },
+   "Sonnet": {
+    "cluer": 0.98875,
+    "cluer_ci": [
+     0.19,
+     1.8625
+    ],
+    "guesser": 0.37375,
+    "guesser_ci": [
+     -0.24875,
+     0.96375
+    ],
+    "own_pair_residual": -0.82375,
+    "own_pair_ci": [
+     -1.85,
+     0.235
+    ]
+   },
+   "GPT-5.5": {
+    "cluer": -0.24125,
+    "cluer_ci": [
+     -0.79625,
+     0.365
+    ],
+    "guesser": 0.03875,
+    "guesser_ci": [
+     -0.5825,
+     0.78375
+    ],
+    "own_pair_residual": 0.08125,
+    "own_pair_ci": [
+     -0.72,
+     0.9325
+    ]
+   },
+   "Sol": {
+    "cluer": 0.59875,
+    "cluer_ci": [
+     0.04125,
+     1.155
+    ],
+    "guesser": -0.31125,
+    "guesser_ci": [
+     -0.865,
+     0.30625
+    ],
+    "own_pair_residual": -0.04875,
+    "own_pair_ci": [
+     -1.025,
+     0.9525
+    ]
+   }
+  },
+  "variance": {
+   "cells": 0.04796997330397035,
+   "cluer": 0.03074744748093865,
+   "guesser": 0.00238099076327081,
+   "interaction": 0.014841535059760885
+  },
+  "firstClue": {
+   "Opus|Sonnet": {
+    "agree": 41,
+    "n": 50
+   },
+   "Opus|GPT-5.5": {
+    "agree": 37,
+    "n": 50
+   },
+   "Opus|Sol": {
+    "agree": 34,
+    "n": 50
+   },
+   "Opus|GloVe": {
+    "agree": 1,
+    "n": 50
+   },
+   "Sonnet|GPT-5.5": {
+    "agree": 31,
+    "n": 50
+   },
+   "Sonnet|Sol": {
+    "agree": 22,
+    "n": 50
+   },
+   "Sonnet|GloVe": {
+    "agree": 0,
+    "n": 50
+   },
+   "GPT-5.5|Sol": {
+    "agree": 44,
+    "n": 50
+   },
+   "GPT-5.5|GloVe": {
+    "agree": 0,
+    "n": 50
+   },
+   "Sol|GloVe": {
+    "agree": 0,
+    "n": 50
+   }
+  }
+ }
+}

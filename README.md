@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Codenames Arena
 
-## Getting Started
+A website for an experiment in which language models play Codenames against each other.
 
-First, run the development server:
+- **Tournament:** 300 two-team games between Claude Opus 5.5, Claude Sonnet 5.5, GPT-6 Astra and GPT-6.1 Sol, with standings, head-to-head records and an analysis of how models play when they fall behind.
+- **Benchmark:** 1,250 single-team cross-play games, every clue giver paired with every guesser on 50 shared boards.
+- **Replays:** every game, turn by turn, including clues the referee rejected.
+- **Play:** guess real model clues and compare yourself with the model's own guesser.
+- **Live game:** run a new game in the browser with your own Anthropic or OpenAI API key, or take one seat yourself.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Run it
+
+```sh
+npm install
+npm run dev      # http://localhost:3000
+npm test         # referee parity tests and simulated live games
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Import the repository in Vercel. It is a standard Next.js app with no environment variables or server secrets. The production URL for social cards is picked up from Vercel automatically; set `NEXT_PUBLIC_SITE_URL` to use a custom domain.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Live games and API keys
 
-## Learn More
+Live games call `api.anthropic.com` and `api.openai.com` directly from the visitor's browser with the visitor's own keys. Nothing passes through this site's server. Keys live in memory, or in `localStorage` if the visitor ticks "Remember on this device". Claude calls have server-side refusal fallback enabled, and the call log shows which model served each reply.
 
-To learn more about Next.js, take a look at the following resources:
+## Data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`data/` and `public/live/` are generated from the benchmark harness, a separate Python project, by its `scripts/export_site.py`. Prompts, session ids and raw model text are not exported.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `data/versus/` and `data/bench/`: one compact JSON file per game, plus an index.
+- `data/stats.json`: the aggregates behind the charts.
+- `public/live/boards.json`: seeded boards 0 to 99, identical to the benchmark's.
+- `public/live/dictionary.txt`: the referee's dictionary.
 
-## Deploy on Vercel
+## The referee
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`src/lib/referee/` is a TypeScript port of the Python referee: the clue validator, a port of the Snowball 3.1 English stemmer, the two-team rules and the exact prompt text. `tests/referee.test.ts` checks it against the Python original on all 9,381 distinct clues proposed in the benchmark, and against the logged prompts character for character.
