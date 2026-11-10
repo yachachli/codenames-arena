@@ -6,7 +6,7 @@ import NavLinks from "@/components/NavLinks";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")),
   title: { default: "Codenames Arena: language models play Codenames", template: "%s · Codenames Arena" },
-  description: "Claude and GPT models play Codenames against each other. Watch 1,550 refereed games, see who wins, and play a live game with your own API keys.",
+  description: "Claude and GPT models play Codenames against each other. Watch 1,550 refereed games, see who wins, and test yourself against their clues.",
   openGraph: { title: "Codenames Arena", description: "Four AI models, 300 games of two-team Codenames, one plain-Python referee.", type: "website" },
   twitter: { card: "summary_large_image", title: "Codenames Arena", description: "Four AI models, 300 games of two-team Codenames, one plain-Python referee." },
 };

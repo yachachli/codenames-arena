@@ -27,8 +27,6 @@ export default function About() {
         or a compound with one. The checks use stems, irregular plurals and word parts, not raw substrings, so EDUCATION is allowed next to CAT.
         An invalid clue or guess is sent back with the referee&apos;s message, up to ten times, before the turn is forfeited. Every attempt is logged, and replays
         show rejected clues struck through.</p>
-      <p>The live game runs a TypeScript port of the same referee in your browser. It is tested against the Python original on all 9,381 distinct clues
-        proposed in the benchmark, and its prompts match the logged prompts character for character.</p>
 
       <h2>The prompts</h2>
       <p>The tournament prompt states the rules, both teams&apos; words left, and the full history of clues and reveals. It never gives strategic advice, so whether
@@ -44,7 +42,7 @@ export default function About() {
         <li>Long-shot moments are rare for strong teams, so per-model pressure figures for Opus, Astra and Sol rest on 5 to 10 clues each.</li>
         <li>The pressure comparison holds the model and its words left fixed, but not the board. A team far behind may also be stuck on a hard board.</li>
         <li>The prompt shows the score every turn, so it can&apos;t separate reasoning about the race from reacting to the words &quot;1 word left&quot;.</li>
-        <li>Command-line tools add their own system prompts. Live games call the APIs directly, so they are fair games but not exact reruns.</li>
+        <li>The command-line tools add their own system prompts, so results may differ slightly from calling the same models through their APIs.</li>
       </ul>
 
       <h2>Prior work</h2>

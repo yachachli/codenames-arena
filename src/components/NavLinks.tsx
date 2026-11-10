@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const LINKS = [
-  ["/tournament", "Tournament"], ["/benchmark", "Benchmark"], ["/play", "Play"], ["/live", "Live game"], ["/about", "About"],
+  ["/tournament", "Tournament"], ["/benchmark", "Benchmark"], ["/play", "Play"], ["/about", "About"],
 ] as const;
 
 export default function NavLinks() {

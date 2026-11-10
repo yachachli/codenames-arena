@@ -10,12 +10,6 @@ export interface QuizItem {
   team: Team; spymaster: string; guesser: string; clue: string; number: number; modelPicks: Pick[];
 }
 
-/** Picks count in order until the first word that isn't the team's, as in the real game. */
-const scoreRun = (picks: string[], roleOf: (w: string) => Role, team: Team) => {
-  let n = 0;
-  for (const w of picks) { if (roleOf(w) !== team) break; n++; }
-  return n;
-};
 
 export default function Quiz({ items }: { items: QuizItem[] }) {
   const [order] = useState<number[]>(() => {
@@ -32,8 +26,8 @@ export default function Quiz({ items }: { items: QuizItem[] }) {
   const roleOf = useMemo(() => (item ? (w: string) => item.key[item.words.indexOf(w)] : () => "civilian" as Role), [item]);
   if (!item) return null;
 
-  const you = scoreRun(sel, roleOf, item.team);
-  const model = item.modelPicks.filter(p => p.r === item.team).length; // the game already stopped at the first miss
+  const you = sel.filter(w => roleOf(w) === item.team).length;
+  const model = item.modelPicks.filter(p => p.r === item.team).length;
   const revealedNow: Record<string, Role> = { ...item.revealed, ...(done ? Object.fromEntries(sel.map(w => [w, roleOf(w)])) : {}) };
 
   const toggle = (w: string) => {
@@ -61,23 +55,23 @@ export default function Quiz({ items }: { items: QuizItem[] }) {
       <Board words={item.words} keyRoles={item.key} revealed={revealedNow} showKey={done} selected={done ? undefined : new Set(sel)} onPick={done ? undefined : toggle} />
       <p className="note" style={{ marginTop: 10 }}>
         {done ? "The coloured edges now show the full key." :
-          `Pick up to ${item.number} word${item.number > 1 ? "s" : ""}, in order of confidence. Words count until your first miss, like the real game. Coloured tiles were revealed earlier in the game.`}
+          `Pick up to ${item.number} word${item.number > 1 ? "s" : ""}. Each one that belongs to the clue giver's team counts. Coloured tiles were revealed earlier in the game.`}
       </p>
       {!done ? (
         <div className="row">
           <button className="btn-primary" disabled={!sel.length} onClick={lockIn}>Lock in {sel.length ? `${sel.length} word${sel.length > 1 ? "s" : ""}` : ""}</button>
-          {sel.length > 0 && <span className="small secondary">Your order: {sel.join(", ")}</span>}
+          {sel.length > 0 && <span className="small secondary">Your picks: {sel.join(", ")}</span>}
           <button onClick={next} style={{ marginLeft: "auto" }}>Skip</button>
         </div>
       ) : (
         <div>
           <p style={{ marginBottom: 6 }}>
             <b>You found {you} of {item.number}.</b>{" "}
-            {sel.map((w, k) => <span key={w}>{k ? ", " : ""}<span className={`pk ${roleOf(w)}`}>{w}</span></span>)}
+            {sel.map((w, k) => <span key={w}>{k ? ", " : ""}<span className={`pk ${roleOf(w)}`}>{w}</span> {roleOf(w) === item.team ? "✓" : "✗"}</span>)}
           </p>
           <p>
             <b><ModelLabel k={item.guesser} />&apos;s guesser found {model}.</b>{" "}
-            {item.modelPicks.map((p, k) => <span key={p.w}>{k ? ", " : ""}<span className={`pk ${p.r}`}>{p.w}</span></span>)}
+            {item.modelPicks.map((p, k) => <span key={p.w}>{k ? ", " : ""}<span className={`pk ${p.r}`}>{p.w}</span> {p.r === item.team ? "✓" : "✗"}</span>)}
             {" "}{you > model ? "You beat it." : you === model ? "A tie." : "The model wins this one."}
           </p>
           <div className="row">

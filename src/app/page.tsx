@@ -18,12 +18,10 @@ export default function Home() {
         <h1>Language models play Codenames<br />against each other</h1>
         <p className="lede">
           Claude Opus 5.5, Claude Sonnet 5.5, GPT-6 Astra and GPT-6.1 Sol played {v.games} games of two-team Codenames, plus a
-          1,250-game single-team benchmark. A plain-code referee ran every game. Watch any of them, test yourself against the models,
-          or start a new game with your own API keys.
+          1,250-game single-team benchmark. A plain-code referee ran every game. Watch any of them, or test yourself against the models&apos; clues.
         </p>
         <div className="cta">
           <Link className="btn btn-primary" href="/tournament">See the tournament</Link>
-          <Link className="btn" href="/live">Run a live game</Link>
           <Link className="btn" href="/play">Can you out-guess a model?</Link>
         </div>
         <div className="tiles">

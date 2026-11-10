@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Board from "./Board";
 import ModelLabel from "./ModelLabel";
-import { REASON_TEXT } from "@/lib/referee/reasons";
+import { REASON_TEXT } from "@/lib/reasons";
 import type { BenchGame, Role, Team, Turn, VersusGame } from "@/lib/types";
 import { resultText } from "@/lib/result";
 
